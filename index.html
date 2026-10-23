@@ -340,12 +340,12 @@
      iPhone. Без поддержки анимаций элементы просто видны сразу. */
 
   @-webkit-keyframes fadeUp {
-    from { opacity: 0; -webkit-transform: translate3d(0, 14px, 0); }
-    to   { opacity: 1; -webkit-transform: translate3d(0, 0, 0); }
+    from { opacity: 0; -webkit-transform: translate(0, 14px); }
+    to   { opacity: 1; -webkit-transform: none; }
   }
   @keyframes fadeUp {
-    from { opacity: 0; transform: translate3d(0, 14px, 0); }
-    to   { opacity: 1; transform: translate3d(0, 0, 0); }
+    from { opacity: 0; transform: translate(0, 14px); }
+    to   { opacity: 1; transform: none; }
   }
 
   @-webkit-keyframes pop {
@@ -395,6 +395,10 @@
     -webkit-transition: -webkit-transform 0.25s ease-out, -webkit-box-shadow 0.25s ease-out;
     transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
   }
+  .btn-text {
+    position: relative;
+    z-index: 1;
+  }
   .btn:after {
     content: "";
     position: absolute;
@@ -403,19 +407,19 @@
     height: 100%;
     background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
     background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
-    -webkit-transform: translate3d(-150%, 0, 0) skewX(-20deg);
-    transform: translate3d(-150%, 0, 0) skewX(-20deg);
+    -webkit-transform: translate(-150%, 0) skewX(-20deg);
+    transform: translate(-150%, 0) skewX(-20deg);
     pointer-events: none;
   }
   .btn:hover {
-    -webkit-transform: translate3d(0, -2px, 0);
-    transform: translate3d(0, -2px, 0);
+    -webkit-transform: translate(0, -2px);
+    transform: translate(0, -2px);
     -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 8px 20px rgba(226,96,12,0.45);
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 8px 20px rgba(226,96,12,0.45);
   }
   .btn:hover:after {
-    -webkit-transform: translate3d(400%, 0, 0) skewX(-20deg);
-    transform: translate3d(400%, 0, 0) skewX(-20deg);
+    -webkit-transform: translate(400%, 0) skewX(-20deg);
+    transform: translate(400%, 0) skewX(-20deg);
     -webkit-transition: -webkit-transform 0.75s ease-in-out;
     transition: transform 0.75s ease-in-out;
   }
@@ -458,7 +462,7 @@
 <div class="wrap">
 
   <div class="card add-card anim-up d3">
-    <a class="btn" id="addBtn" href="#">Add to Cydia</a>
+    <a class="btn" id="addBtn" href="#"><span class="btn-text" id="addBtnText">Add to Cydia</span></a>
     <div class="manual">
       <div class="manual-title" id="manualTitle">Add manually</div>
       <p class="manual-text" id="manualText"></p>
@@ -560,6 +564,14 @@
     return '-webkit-animation-delay:' + d + ';animation-delay:' + d;
   }
 
+  // Старый Safari иногда не перерисовывает кнопку после смены текста
+  // (остаются куски старых букв) — прячем и сразу показываем её обратно.
+  function repaint(el) {
+    el.style.display = 'none';
+    el.offsetHeight; // принудительный пересчёт раскладки
+    el.style.display = '';
+  }
+
   function setText(id, text) {
     var el = $(id);
     if (el) el.innerHTML = escapeHtml(text);
@@ -573,7 +585,8 @@
     document.documentElement.setAttribute('lang', lang);
     setText('repoDesc', t.tagline);
     setText('badge', t.badge);
-    setText('addBtn', t.addBtn);
+    setText('addBtnText', t.addBtn);
+    repaint($('addBtn'));
     setText('manualTitle', t.manualTitle);
     setText('manualText', t.manualText);
     setText('footerLink', t.footerLink);
