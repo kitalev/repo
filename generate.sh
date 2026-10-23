@@ -68,7 +68,7 @@ Version: 1.0
 Codename: ios
 Architectures: iphoneos-arm
 Components: main
-Description: Мой Cydia-репозиторий для iOS 6
+Description: Apps and tweaks for classic iPhone, iPad and iPod touch. Home of GitHub Legacy.
 EOF
 
 # packages.json — для страницы index.html (список пакетов, ссылки на скачивание)
