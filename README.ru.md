@@ -8,7 +8,7 @@
 
 ---
 
-Мой личный Cydia/Sileo-репозиторий для iOS 6+. Сейчас в нём лежит [GitHub Legacy](https://github.com/kitalev/GitHub-Legacy) — лёгкий нативный клиент GitHub для старых версий iOS.
+Мой личный Cydia/Sileo-репозиторий для старых iOS-устройств. Сейчас в нём лежит [GitHub Legacy](https://github.com/kitalev/GitHub-Legacy) — лёгкий нативный клиент GitHub для старых версий iOS.
 
 **Адрес репозитория:** `https://kitalev.github.io/repo/`
 

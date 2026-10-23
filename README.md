@@ -8,7 +8,7 @@
 
 ---
 
-My personal Cydia/Sileo package repository for iOS 6+. Currently hosts [GitHub Legacy](https://github.com/kitalev/GitHub-Legacy), a lightweight native GitHub client for old iOS versions.
+My personal Cydia/Sileo package repository for legacy iOS devices. Currently hosts [GitHub Legacy](https://github.com/kitalev/GitHub-Legacy), a lightweight native GitHub client for old iOS versions.
 
 **Repo URL:** `https://kitalev.github.io/repo/`
 
