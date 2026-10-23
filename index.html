@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<link rel="apple-touch-icon" href="CydiaIcon.png">
+<link rel="apple-touch-icon" href="avatar.jpg">
 <title>kitalev's Repo</title>
 <!--
   Страница намеренно написана без современных возможностей (CSS-переменные,
@@ -26,8 +26,8 @@
   }
 
   body {
-    background: #eceff4;
-    color: #1c2430;
+    background: #f6eedb;
+    color: #1a1714;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 15px;
     line-height: 1.4;
@@ -35,7 +35,7 @@
     text-size-adjust: 100%;
   }
 
-  a { color: #2a6bd8; }
+  a { color: #d9620c; }
 
   /* ---------- Hero ---------- */
 
@@ -44,18 +44,18 @@
     padding: 18px 16px 74px;
     text-align: center;
     color: #fff;
-    background: #1d2b4a;
-    background: -webkit-gradient(linear, left top, left bottom, from(#24345a), to(#121a2e));
-    background: -webkit-linear-gradient(top, #24345a 0%, #121a2e 100%);
-    background: linear-gradient(to bottom, #24345a 0%, #121a2e 100%);
+    background: #1c1a18;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2a2622), to(#0e0d0c));
+    background: -webkit-linear-gradient(top, #2a2622 0%, #0e0d0c 100%);
+    background: linear-gradient(to bottom, #2a2622 0%, #0e0d0c 100%);
   }
 
   .hero-glow {
     position: absolute;
     left: 0; right: 0; top: 0; height: 100%;
-    background: -webkit-gradient(radial, 50% 0, 0, 50% 0, 260, from(rgba(90,150,255,0.35)), to(rgba(90,150,255,0)));
-    background: -webkit-radial-gradient(50% 0, circle, rgba(90,150,255,0.35) 0, rgba(90,150,255,0) 260px);
-    background: radial-gradient(circle at 50% 0, rgba(90,150,255,0.35) 0, rgba(90,150,255,0) 260px);
+    background: -webkit-gradient(radial, 50% 0, 0, 50% 0, 260, from(rgba(240,122,30,0.38)), to(rgba(240,122,30,0)));
+    background: -webkit-radial-gradient(50% 0, circle, rgba(240,122,30,0.38) 0, rgba(240,122,30,0) 260px);
+    background: radial-gradient(circle at 50% 0, rgba(240,122,30,0.38) 0, rgba(240,122,30,0) 260px);
     pointer-events: none;
   }
 
@@ -88,21 +88,22 @@
     user-select: none;
   }
   .lang-btn.active {
-    color: #13203a;
-    background: #fff;
-    border-color: #fff;
+    color: #fff;
+    background: #f07a1e;
+    border-color: #f07a1e;
   }
 
   .repo-icon {
     display: block;
-    width: 88px;
-    height: 88px;
+    width: 96px;
+    height: 96px;
     margin: 0 auto 14px;
-    -webkit-border-radius: 20px;
-    border-radius: 20px;
-    background: #000;
-    -webkit-box-shadow: 0 0 0 1px rgba(255,255,255,0.12), 0 8px 22px rgba(0,0,0,0.5);
-    box-shadow: 0 0 0 1px rgba(255,255,255,0.12), 0 8px 22px rgba(0,0,0,0.5);
+    -webkit-border-radius: 48px;
+    border-radius: 48px;
+    background: #f6e3b0;
+    border: 3px solid #f07a1e;
+    -webkit-box-shadow: 0 0 0 4px rgba(240,122,30,0.25), 0 8px 22px rgba(0,0,0,0.55);
+    box-shadow: 0 0 0 4px rgba(240,122,30,0.25), 0 8px 22px rgba(0,0,0,0.55);
   }
 
   h1 {
@@ -128,8 +129,8 @@
     font-weight: bold;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #9fc2ff;
-    border: 1px solid rgba(159,194,255,0.35);
+    color: #d6d04a;
+    border: 1px solid rgba(214,208,74,0.45);
     -webkit-border-radius: 10px;
     border-radius: 10px;
   }
@@ -147,8 +148,8 @@
     background: #fff;
     -webkit-border-radius: 14px;
     border-radius: 14px;
-    -webkit-box-shadow: 0 1px 2px rgba(20,30,50,0.08), 0 6px 18px rgba(20,30,50,0.08);
-    box-shadow: 0 1px 2px rgba(20,30,50,0.08), 0 6px 18px rgba(20,30,50,0.08);
+    -webkit-box-shadow: 0 1px 2px rgba(60,40,10,0.08), 0 6px 18px rgba(60,40,10,0.08);
+    box-shadow: 0 1px 2px rgba(60,40,10,0.08), 0 6px 18px rgba(60,40,10,0.08);
     overflow: hidden;
   }
 
@@ -162,35 +163,35 @@
     text-align: center;
     text-decoration: none;
     color: #fff;
-    background: #2a6bd8;
-    background: -webkit-gradient(linear, left top, left bottom, from(#3d86f0), to(#2259c4));
-    background: -webkit-linear-gradient(top, #3d86f0 0%, #2259c4 100%);
-    background: linear-gradient(to bottom, #3d86f0 0%, #2259c4 100%);
-    border: 1px solid #1d4fae;
+    background: #f07a1e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff9b3d), to(#e2600c));
+    background: -webkit-linear-gradient(top, #ff9b3d 0%, #e2600c 100%);
+    background: linear-gradient(to bottom, #ff9b3d 0%, #e2600c 100%);
+    border: 1px solid #c4520a;
     -webkit-border-radius: 12px;
     border-radius: 12px;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 2px 6px rgba(34,89,196,0.35);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 2px 6px rgba(34,89,196,0.35);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 2px 6px rgba(226,96,12,0.35);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 2px 6px rgba(226,96,12,0.35);
     text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
   }
-  .btn:active { background: #2259c4; }
+  .btn:active { background: #e2600c; }
 
   .manual {
     margin-top: 14px;
     padding-top: 14px;
-    border-top: 1px solid #edf0f4;
+    border-top: 1px solid #f1e9d6;
   }
   .manual-title {
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: #8a94a3;
+    color: #9a8c72;
     margin-bottom: 6px;
   }
   .manual-text {
     font-size: 13px;
-    color: #5a6575;
+    color: #5f5546;
     margin: 0 0 10px;
   }
   .url-field {
@@ -200,9 +201,9 @@
     margin: 0;
     font-family: Menlo, Courier, monospace;
     font-size: 13px;
-    color: #1c2430;
-    background: #f3f5f8;
-    border: 1px solid #dfe3ea;
+    color: #1a1714;
+    background: #fbf6ea;
+    border: 1px solid #eadfc4;
     -webkit-border-radius: 9px;
     border-radius: 9px;
     -webkit-appearance: none;
@@ -215,7 +216,7 @@
     font-weight: bold;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #7b8594;
+    color: #8a7a5a;
   }
 
   /* Строки пакетов на display:table — работает везде, в отличие от flex gap */
@@ -223,7 +224,7 @@
     display: table;
     width: 100%;
     table-layout: fixed;
-    border-bottom: 1px solid #edf0f4;
+    border-bottom: 1px solid #f1e9d6;
   }
   .row-last { border-bottom: none; }
   .cell {
@@ -264,7 +265,7 @@
   .pkg-name {
     font-size: 16px;
     font-weight: bold;
-    color: #1c2430;
+    color: #1a1714;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -272,7 +273,7 @@
   .pkg-meta {
     margin-top: 1px;
     font-size: 12px;
-    color: #8a94a3;
+    color: #9a8c72;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -281,7 +282,7 @@
     margin-top: 4px;
     font-size: 13px;
     line-height: 1.35;
-    color: #5a6575;
+    color: #5f5546;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -296,25 +297,25 @@
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    color: #2a6bd8;
-    background: #eaf1fd;
-    border: 1px solid #cfe0fb;
+    color: #d9620c;
+    background: #fff0df;
+    border: 1px solid #f8d2a8;
     -webkit-border-radius: 15px;
     border-radius: 15px;
     white-space: nowrap;
   }
-  .get-btn:active { background: #d6e5fc; }
+  .get-btn:active { background: #fde2c4; }
 
   .empty {
     padding: 28px 16px;
     text-align: center;
     font-size: 14px;
-    color: #7b8594;
+    color: #8a7a5a;
   }
   .empty code {
     padding: 1px 5px;
     font-size: 12px;
-    background: #f0f2f6;
+    background: #f6efde;
     -webkit-border-radius: 4px;
     border-radius: 4px;
   }
@@ -323,9 +324,9 @@
     margin-top: 28px;
     text-align: center;
     font-size: 12px;
-    color: #9aa3b0;
+    color: #a8987a;
   }
-  footer a { color: #7b8594; }
+  footer a { color: #8a7a5a; }
 </style>
 </head>
 <body>
@@ -336,7 +337,7 @@
     <div class="lang">
       <span class="lang-btn" id="langEnBtn">EN</span><span class="lang-btn" id="langRuBtn">RU</span>
     </div>
-    <img class="repo-icon" src="CydiaIcon.png" width="88" height="88" alt="">
+    <img class="repo-icon" src="avatar.jpg" width="96" height="96" alt="kitalev">
     <h1 id="repoTitle">kitalev's Repo</h1>
     <p class="tagline" id="repoDesc">Personal Cydia repository for legacy iOS devices.</p>
     <span class="badge" id="badge">Legacy iOS</span>
