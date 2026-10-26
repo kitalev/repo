@@ -600,6 +600,11 @@
   $('langEnBtn').onclick = function () { applyLang('en'); };
   $('langRuBtn').onclick = function () { applyLang('ru'); };
 
+  // Иконки пакетов по идентификатору; у остальных — буквы из названия
+  var PKG_ICONS = {
+    'com.githublegacy.app': 'githublegacy.png'
+  };
+
   function render() {
     var t = STRINGS[currentLang];
     var listEl = $('pkgList');
@@ -632,13 +637,16 @@
       var filename = p.Filename || '';
       var sizeKb = p.Size ? Math.max(1, Math.round(Number(p.Size) / 1024)) + t.sizeUnit : '';
       var meta = (version ? 'v' + version : '') + (version && sizeKb ? ' · ' : '') + sizeKb;
+      var scheme = p.Architecture === 'iphoneos-arm64' ? 'rootless' : (p.Architecture === 'iphoneos-arm' ? 'rootful' : '');
+      if (scheme) meta += (meta ? ' · ' : '') + scheme;
+      var icon = PKG_ICONS[p.Package];
       var last = i === lastPkgs.length - 1 ? ' row-last' : '';
 
       html +=
         '<div class="row anim-up' + last + '" style="' + rowDelay(i) + '">' +
           '<div class="cell cell-icon">' +
-            (lastPkgs.length === 1
-              ? '<img class="pkg-icon" src="githublegacy.png" width="52" height="52" alt="">'
+            (icon
+              ? '<img class="pkg-icon" src="' + escapeHtml(icon) + '" width="52" height="52" alt="">'
               : '<div class="pkg-icon pkg-letter">' + escapeHtml(initials(name)) + '</div>') +
           '</div>' +
           '<div class="cell cell-info">' +
