@@ -17,5 +17,24 @@
     "MD5sum": "89b04280ca99feb58bd9b294653ea23c",
     "SHA1": "bd2b2ee48ef8f54a8eca04687882f46c697c8753",
     "SHA256": "93e50c703ed2e24a883b28babb3b571be3a62dd8413197d64ff5d1a84d474999"
+  },
+  {
+    "Package": "com.githublegacy.app",
+    "Name": "GitHub Legacy",
+    "Description": "A lightweight GitHub client for iOS 15+ rootless jailbreaks - browse repositories, read READMEs, and download releases.",
+    "Maintainer": "kitalev",
+    "Author": "kitalev",
+    "Section": "Applications",
+    "Depends": "firmware (>= 15.0)",
+    "Recommends": "mobilesubstrate",
+    "Icon": "file:///var/jb/Applications/GitHubLegacy.app/Icon@2x.png",
+    "Architecture": "iphoneos-arm64",
+    "Version": "2.0",
+    "Installed-Size": "1980",
+    "Filename": "debs/GitHubLegacy_2.0_rootless_iOS15plus.deb",
+    "Size": "740316",
+    "MD5sum": "8748c8712a2b59bafa88aad1e2697dd1",
+    "SHA1": "2b4a51440a386146b928523d279c21cd1bd7e0f9",
+    "SHA256": "94996e1ed5d331561626362da86b100da2333d8e5111d9d84c0c8bd67662f518"
   }
 ]
